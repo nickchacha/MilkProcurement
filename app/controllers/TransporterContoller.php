@@ -5,30 +5,73 @@ class TransporterContoller extends BaseController
 	{
 		return View::make('index');
 	}
-	function creategrader()
+	function createtransporter()
 	{
-		return View::make('creategrader')
+		return View::make('transporter.create');
 	}
-	function hundlecreategrader()
+	function store()
 	{
+		$validator=Validator::make(Input::all(), Transporter::$rules);
+		if($validator->passes())
+		{
+			$transporter= new Transporter();
+			$transporter->firstname=Input::get('firstname');
+			$transporter->lastname=Input::get('lastname');
+			$transporter->mobilenumner=Input::::get('mobilenumber');
+			$transporter->route_id=Input::('route_id');
+			$transporter->IDnumber=Input::('IDnumber');
+			$transporter->Carrier=Input::('carrier');
+			if(Input::has('Motobike')){
+				$transporter->motobikeregnumber='motobikeregnumber';
+			}
+			if(Input::has('Vehicle')){
+				$transporter->vehiclemodel=Input::('vehiclemodel');
+				$transporter->vehicleregnumber=Input::('vehicleregnumber');
+				$transporter->vehiclecapacity=Input::('vehiclecapacity');
+			}
+			$transporter->save();
+		}
 	//	retun View::make('hundlecreateGrader')
 	}
-	public function editgrader(Farmer, $farmer)
+	public function editTransporter($id)
 	{
-		return View::make('editgrader');
+		return View::make('transporter.Edit');
 	}
-	public function handlegraderdit()
+	public function handletransporterEdit()
 	{
+		$validate=Validator::make(Input::all(), Transporter::$rules);
+		if ($Validator->passes()){
+			$transporter= Transporter::find($id);
+			$transporter->firstname=Input::get('firstname');
+			$transporter->lastname=Input::get('lastname');
+			$transporter->mobilenumner=Input::::get('mobilenumber');
+			$transporter->route_id=Input::('route_id');
+			$transporter->IDnumber=Input::('IDnumber');
+			$transporter->carrier=Input::('carrier');
+			if(Input::has('Motobike')){
+				$transporter->motobikeregnumber='motobikeregnumber';
+			}
+			if(Input::has('Vehicle')){
+				$transporter->vehiclemodel=Input::('vehiclemodel');
+				$transporter->vehicleregnumber=Input::('vehicleregnumber');
+				$transporter->vehiclecapacity=Input::('vehiclecapacity');
+			}
+			$transporter->save();
+			return Redirect::to('transporter.list')->with('Transporter Edited');
+
+			else{
+				Redirect::to('transporte.edit'->withErrors($validator);
+			}
+
+		}
 
 	}
-	public function deletegrader()
+	public function deleteTranporter()
 	{
-		retun View::make(deletegrader);
+		$transporter=Transporter::find($id);
+		$transporter->delete($id);
+		Redirect::to('transporter.list')->with('transporter deleted');
 
-	}
-	public function handledeletegrader()
-	{
-		//handle delete confrimation
 	}
 	
 

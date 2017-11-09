@@ -1,11 +1,20 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
+	"name": "laravel/MilkProcurement",
+	"description": "MilkProcurement System.",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"type": "project",
+	"author":[
+		{
+			"name":"Chacha Kairu",
+			"website":"chacha.fastworldsolutions.net"
+
+		}
+	],
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "~4.2",
+		"zizaco/confide": "~4.0@dev",
+		"zizaco/entrust": "~1.2"
 	},
 	"autoload": {
 		"classmap": [

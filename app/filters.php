@@ -37,14 +37,8 @@ Route::filter('auth', function()
 {
 	if (Auth::guest())
 	{
-		if (Request::ajax())
-		{
-			return Response::make('Unauthorized', 401);
-		}
-		else
-		{
-			return Redirect::guest('login');
-		}
+		return Redirect::guest('users/login');
+		
 	}
 });
 
@@ -67,8 +61,10 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('/');
+	if (Auth::check()) return Redirect::to('users/login/');
 });
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -80,6 +76,18 @@ Route::filter('guest', function()
 | session does not match the one given in this request, we'll bail.
 |
 */
+// Check for role on all admin routes, minimum admin level
+//Entrust::routeNeedsRole( 'admin*', array('admin'), Redirect::to('/') );
+
+// Check for permissions on admin actions
+//Entrust::routeNeedsPermission( 'admin/blogs*', 'manage_blogs', Redirect::to('/admin') );
+//Entrust::routeNeedsPermission( 'admin/comments*', 'manage_comments', Redirect::to('/admin') );
+//Entrust::routeNeedsPermission( 'admin/users*', 'manage_users', Redirect::to('/admin') );
+//Entrust::routeNeedsPermission( 'admin/roles*', 'manage_roles', Redirect::to('/admin') );
+
+
+
+
 
 Route::filter('csrf', function()
 {
@@ -87,4 +95,22 @@ Route::filter('csrf', function()
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}
+});
+
+
+
+
+Route::filter('detectLang',  function($route, $request, $lang = 'auto')
+{
+
+    if($lang != "auto" && in_array($lang , Config::get('app.available_language')))
+    {
+        Config::set('app.locale', $lang);
+    }else{
+        $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
+        $browser_lang = substr($browser_lang, 0,2);
+        $userLang = (in_array($browser_lang, Config::get('app.available_language'))) ? $browser_lang : Config::get('app.locale');
+        Config::set('app.locale', $userLang);
+        App::setLocale($userLang);
+    }
 });

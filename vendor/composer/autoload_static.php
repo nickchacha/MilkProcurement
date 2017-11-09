@@ -16,6 +16,11 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zizaco\\Entrust\\' => 15,
+            'Zizaco\\Confide\\' => 15,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -50,6 +55,14 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zizaco\\Entrust\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust',
+        ),
+        'Zizaco\\Confide\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zizaco/confide/src/Confide',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -172,6 +185,13 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
                 0 => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib',
             ),
         ),
+        'L' => 
+        array (
+            'LaravelBook\\Ardent' => 
+            array (
+                0 => __DIR__ . '/..' . '/laravelbook/ardent/src',
+            ),
+        ),
         'J' => 
         array (
             'Jeremeamia\\SuperClosure' => 
@@ -214,6 +234,9 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
     );
 
     public static $classMap = array (
+        'AdminController' => __DIR__ . '/../..' . '/app/controllers/AdminController.php',
+        'AdminDashboardController' => __DIR__ . '/../..' . '/app/controllers/AdminDashboardController.php',
+        'AdminUsersController' => __DIR__ . '/../..' . '/app/controllers/AdminUsersController.php',
         'BaseController' => __DIR__ . '/../..' . '/app/controllers/BaseController.php',
         'Boris\\Boris' => __DIR__ . '/..' . '/d11wtq/boris/lib/Boris/Boris.php',
         'Boris\\CLIOptionsHandler' => __DIR__ . '/..' . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -238,13 +261,18 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'ClassPreloader\\Parser\\DirVisitor' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassPreloader/Parser/DirVisitor.php',
         'ClassPreloader\\Parser\\FileVisitor' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
         'ClassPreloader\\Parser\\NodeTraverser' => __DIR__ . '/..' . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
-        'CreateCollectionCenter' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_132148_create_Collection_center.php',
+        'ConfideSetupUsersTable' => __DIR__ . '/../..' . '/app/database/migrations/2017_08_23_081855_confide_setup_users_table.php',
+        'CreateCollectionCenter' => __DIR__ . '/../..' . '/app/database/migrations/2017_08_28_132148_create_Collection_center.php',
         'CreateDaysCollection' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_132336_create_DaysCollection.php',
         'CreateFarmers' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_132002_create_Farmers.php',
-        'CreateGraders' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_132245_create_Graders.php',
-        'CreateMilkProcurement' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_115737_create_MilkProcurement.php',
-        'CreateRoutes' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_132054_create_Routes.php',
-        'CreateTransporters' => __DIR__ . '/../..' . '/app/database/migrations/2017_09_15_132447_create_transporters.php',
+        'CreateGraders' => __DIR__ . '/../..' . '/app/database/migrations/2017_08_29_132245_create_Graders.php',
+        'CreateRoutes' => __DIR__ . '/../..' . '/app/database/migrations/2017_08_27_132054_create_Routes.php',
+        'CreateTransporteEdit' => __DIR__ . '/../..' . '/app/database/migrations/2017_11_04_113001_createTransporte_edit=Transporter_edit.php',
+        'CreateTransporters' => __DIR__ . '/../..' . '/app/database/migrations/2017_08_26_132447_create_transporters.php',
+        'CreateTripTable' => __DIR__ . '/../..' . '/app/database/migrations/2017_10_15_085316_create_trip_table.php',
+        'CreateTripsTable' => __DIR__ . '/../..' . '/app/database/migrations/2017_10_29_102059_create_trips_table.php',
+        'CreateUpdateDayscollection' => __DIR__ . '/../..' . '/app/database/migrations/2017_11_01_142041_create_update_Dayscollection.php',
+        'CreateUserUpdateUsernameTable' => __DIR__ . '/../..' . '/app/database/migrations/2017_10_31_063808_create_user_updateUsername_table.php',
         'Crypt_AES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
         'Crypt_Base' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
         'Crypt_Blowfish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php',
@@ -257,13 +285,16 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'Crypt_TripleDES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
         'Crypt_Twofish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/app/database/seeds/DatabaseSeeder.php',
-        'Farmer' => __DIR__ . '/../..' . '/app/models/Farmer.php',
+        'Farmers' => __DIR__ . '/../..' . '/app/models/Farmers.php',
+        'FarmersController' => __DIR__ . '/../..' . '/app/controllers/FarmersController.php',
         'File_ANSI' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
         'File_ASN1' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
         'File_ASN1_Element' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
         'File_X509' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/File/X509.php',
-        'GamesController' => __DIR__ . '/../..' . '/app/controllers/FarmersController.php',
+        'Graders' => __DIR__ . '/../..' . '/app/models/Graders.php',
+        'GradersController' => __DIR__ . '/../..' . '/app/controllers/GradersControllers.php',
         'HomeController' => __DIR__ . '/../..' . '/app/controllers/HomeController.php',
+        'HomeDashboardController' => __DIR__ . '/../..' . '/app/controllers/HomeDashboardController.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
         'Illuminate\\Auth\\AuthManager' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/AuthManager.php',
         'Illuminate\\Auth\\AuthServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Auth/AuthServiceProvider.php',
@@ -640,7 +671,14 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'Jeremeamia\\SuperClosure\\SerializableClosure' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Jeremeamia/SuperClosure/SerializableClosure.php',
         'Jeremeamia\\SuperClosure\\Visitor\\ClosureFinderVisitor' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Jeremeamia/SuperClosure/Visitor/ClosureFinderVisitor.php',
         'Jeremeamia\\SuperClosure\\Visitor\\MagicConstantVisitor' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Jeremeamia/SuperClosure/Visitor/MagicConstantVisitor.php',
+        'LaravelBook\\Ardent\\Ardent' => __DIR__ . '/..' . '/laravelbook/ardent/src/LaravelBook/Ardent/Ardent.php',
+        'LaravelBook\\Ardent\\Builder' => __DIR__ . '/..' . '/laravelbook/ardent/src/LaravelBook/Ardent/Builder.php',
+        'LaravelBook\\Ardent\\Facades\\Ardent' => __DIR__ . '/..' . '/laravelbook/ardent/src/LaravelBook/Ardent/Facades/Ardent.php',
+        'LaravelBook\\Ardent\\InvalidModelException' => __DIR__ . '/..' . '/laravelbook/ardent/src/LaravelBook/Ardent/InvalidModelException.php',
+        'LaravelBook\\Ardent\\Providers\\ArdentServiceProvider' => __DIR__ . '/..' . '/laravelbook/ardent/src/LaravelBook/Ardent/Providers/ArdentServiceProvider.php',
         'Math_BigInteger' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Math/BigInteger.php',
+        'MilkCollection' => __DIR__ . '/../..' . '/app/models/MilkCollections.php',
+        'MilkCollectionContoller' => __DIR__ . '/../..' . '/app/controllers/MilkCollectionContoller.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
         'Monolog\\Formatter\\ElasticaFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ElasticaFormatter.php',
@@ -921,6 +959,7 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'Patchwork\\Utf8\\BestFit' => __DIR__ . '/..' . '/patchwork/utf8/src/Patchwork/Utf8/BestFit.php',
         'Patchwork\\Utf8\\Bootup' => __DIR__ . '/..' . '/patchwork/utf8/src/Patchwork/Utf8/Bootup.php',
         'Patchwork\\Utf8\\WindowsStreamWrapper' => __DIR__ . '/..' . '/patchwork/utf8/src/Patchwork/Utf8/WindowsStreamWrapper.php',
+        'Permission' => __DIR__ . '/../..' . '/app/models/Permission.php',
         'Predis\\Autoloader' => __DIR__ . '/..' . '/predis/predis/lib/Predis/Autoloader.php',
         'Predis\\BasicClientInterface' => __DIR__ . '/..' . '/predis/predis/lib/Predis/BasicClientInterface.php',
         'Predis\\Client' => __DIR__ . '/..' . '/predis/predis/lib/Predis/Client.php',
@@ -1196,6 +1235,9 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
+        'Role' => __DIR__ . '/../..' . '/app/models/Role.php',
+        'RouteContoller' => __DIR__ . '/../..' . '/app/controllers/Routes.php',
+        'Routes' => __DIR__ . '/../..' . '/app/models/Routes.php',
         'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
         'Stack\\Builder' => __DIR__ . '/..' . '/stack/builder/src/Stack/Builder.php',
         'Stack\\StackedHttpKernel' => __DIR__ . '/..' . '/stack/builder/src/Stack/StackedHttpKernel.php',
@@ -1795,7 +1837,14 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'System_SSH_Agent' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
         'System_SSH_Agent_Identity' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/System/SSH/Agent.php',
         'TestCase' => __DIR__ . '/../..' . '/app/tests/TestCase.php',
+        'TransporterContoller' => __DIR__ . '/../..' . '/app/controllers/TransporterContoller.php',
+        'Transporters' => __DIR__ . '/../..' . '/app/models/Transporters.php',
+        'Trip' => __DIR__ . '/../..' . '/app/models/Trip.php',
+        'TripController' => __DIR__ . '/../..' . '/app/controllers/TripController.php',
         'User' => __DIR__ . '/../..' . '/app/models/User.php',
+        'UserRepository' => __DIR__ . '/../..' . '/app/models/UserRepository.php',
+        'UsersController' => __DIR__ . '/../..' . '/app/controllers/UsersController.php',
+        'UsersTableSeeder' => __DIR__ . '/../..' . '/app/database/seeds/UsersTableSeeder.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',
@@ -1817,6 +1866,30 @@ class ComposerStaticInitefb2b3c6e1310e7c2b425582b44037f3
         'Whoops\\Run' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Run.php',
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'Zizaco\\Confide\\CacheLoginThrottleService' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/CacheLoginThrottleService.php',
+        'Zizaco\\Confide\\Confide' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/Confide.php',
+        'Zizaco\\Confide\\ConfideUser' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/ConfideUser.php',
+        'Zizaco\\Confide\\ConfideUserInterface' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/ConfideUserInterface.php',
+        'Zizaco\\Confide\\ControllerCommand' => __DIR__ . '/..' . '/zizaco/confide/src/commands/ControllerCommand.php',
+        'Zizaco\\Confide\\EloquentPasswordService' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/EloquentPasswordService.php',
+        'Zizaco\\Confide\\EloquentRepository' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/EloquentRepository.php',
+        'Zizaco\\Confide\\Facade' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/Facade.php',
+        'Zizaco\\Confide\\LoginThrottleServiceInterface' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/LoginThrottleServiceInterface.php',
+        'Zizaco\\Confide\\MigrationCommand' => __DIR__ . '/..' . '/zizaco/confide/src/commands/MigrationCommand.php',
+        'Zizaco\\Confide\\PasswordServiceInterface' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/PasswordServiceInterface.php',
+        'Zizaco\\Confide\\RepositoryInterface' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/RepositoryInterface.php',
+        'Zizaco\\Confide\\RoutesCommand' => __DIR__ . '/..' . '/zizaco/confide/src/commands/RoutesCommand.php',
+        'Zizaco\\Confide\\ServiceProvider' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/ServiceProvider.php',
+        'Zizaco\\Confide\\Support\\GenerateCommand' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/Support/GenerateCommand.php',
+        'Zizaco\\Confide\\UserValidator' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/UserValidator.php',
+        'Zizaco\\Confide\\UserValidatorInterface' => __DIR__ . '/..' . '/zizaco/confide/src/Confide/UserValidatorInterface.php',
+        'Zizaco\\Entrust\\Entrust' => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust/Entrust.php',
+        'Zizaco\\Entrust\\EntrustFacade' => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust/EntrustFacade.php',
+        'Zizaco\\Entrust\\EntrustPermission' => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust/EntrustPermission.php',
+        'Zizaco\\Entrust\\EntrustRole' => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust/EntrustRole.php',
+        'Zizaco\\Entrust\\EntrustServiceProvider' => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust/EntrustServiceProvider.php',
+        'Zizaco\\Entrust\\HasRole' => __DIR__ . '/..' . '/zizaco/entrust/src/Entrust/HasRole.php',
+        'Zizaco\\Entrust\\MigrationCommand' => __DIR__ . '/..' . '/zizaco/entrust/src/commands/MigrationCommand.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
